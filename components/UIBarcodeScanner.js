@@ -15,13 +15,13 @@ const UIBarcodeScanner = ()=> {
                 width={'100%'}
                 height={'100%'}
                 onUpdate={(err, result) => {
-                    if (result) setData(result.text);
+                    if (result) setData(JSON.parse(result.text));
                     else setData("Not Found");
                 }}
             />
 
             <div className='debugger_'>
-                <p>Test : {data}</p>
+                <p>Test : {data.customerID}</p>
             </div>
         </>
         
