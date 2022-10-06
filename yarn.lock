@@ -959,6 +959,22 @@
   "resolved" "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   "version" "1.2.1"
 
+"@impactdk/barcode-scanner@^2.0.0":
+  "integrity" "sha512-lkanR9yR2oOieORVAw7dyr7A+PzByuHvTxO02mFgVQV9f1KZC/FuqsIZezsbjUDrCk9T1/BkfV122qza3LKQsw=="
+  "resolved" "https://registry.npmjs.org/@impactdk/barcode-scanner/-/barcode-scanner-2.0.1.tgz"
+  "version" "2.0.1"
+  dependencies:
+    "rawr" "^0.13.0"
+    "tslib" "^1.9.0"
+
+"@impactdk/react-barcode-scanner@^1.0.2":
+  "integrity" "sha512-iv4ArQgCzW/ymoCB9NKldXvYJm1HZBL5YawNUiivrwWviPL540/OSx4fmogpG5UvhpCn7k1ig3dScs4ESwvlDg=="
+  "resolved" "https://registry.npmjs.org/@impactdk/react-barcode-scanner/-/react-barcode-scanner-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "@impactdk/barcode-scanner" "^2.0.0"
+    "tslib" "^1.9.0"
+
 "@jridgewell/gen-mapping@^0.1.0":
   "integrity" "sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w=="
   "resolved" "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.1.1.tgz"
@@ -3266,6 +3282,11 @@
   dependencies:
     "safe-buffer" "^5.1.0"
 
+"rawr@^0.13.0":
+  "integrity" "sha512-YEc32YlgHUW14BeX3DunMo+U3HWRFqx+SXpUM+A9jV4Rqgoc0ZoemrndlFhR7+rRljJJXR/DFCpHfBnDo7fh9A=="
+  "resolved" "https://registry.npmjs.org/rawr/-/rawr-0.13.0.tgz"
+  "version" "0.13.0"
+
 "react-barcode-reader@^0.0.2":
   "integrity" "sha512-sbVTr/PFYd1iXeVCFiJk5xIQxaL7vNe8kNZ4cSx22rHumD9uxt9EH2xg2taIHxAruLtlI+gbNiJIgKSBiqjgFA=="
   "resolved" "https://registry.npmjs.org/react-barcode-reader/-/react-barcode-reader-0.0.2.tgz"
@@ -3276,7 +3297,7 @@
     "react" "^16.13.1"
     "react-dom" "^16.13.1"
 
-"react-dom@^16.13.1", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>=15.3.0", "react-dom@18.2.0":
+"react-dom@^16.13.1", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>=15.3.0", "react-dom@>=16.8.0", "react-dom@18.2.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -3303,7 +3324,7 @@
   "resolved" "https://registry.npmjs.org/react-webcam/-/react-webcam-5.2.4.tgz"
   "version" "5.2.4"
 
-"react@^16.13.1", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=15.3.0", "react@18.2.0":
+"react@^16.13.1", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=15.3.0", "react@>=16.8.0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
@@ -3786,6 +3807,11 @@
     "strip-bom" "^3.0.0"
 
 "tslib@^1.8.1":
+  "integrity" "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="
+  "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
+  "version" "1.14.1"
+
+"tslib@^1.9.0":
   "integrity" "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   "version" "1.14.1"

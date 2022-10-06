@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import BarcodeReader from 'react-barcode-reader'
+import { ReactBarcodeScanner } from "@impactdk/react-barcode-scanner";
 
 const UIBarcodeScanner = ()=> {
 
@@ -15,12 +15,9 @@ const UIBarcodeScanner = ()=> {
 
     return (
         <>  
-            
-            <BarcodeReader
-                onError={handleError}
-                onScan={handleScan}
+            <ReactBarcodeScanner
+                onFindBarcode={handleScan} 
             />
-  
             <div className='debugger_'>
                 <p>Test : { data.length ? data: ''}</p>
             </div>
