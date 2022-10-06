@@ -55,8 +55,11 @@ const UIModal = ({close, id})=> {
                       <strong>{data.isValid ? 'Verified' : 'Nonverified'}</strong>
                     </li>
 
+                    {
+                        data.isValid ? <p>Already Validated</p> : <UIButton title="Validate" clicked={close}/>
+                    }
                     <li className="full_">
-                        <UIButton title="Validate" clicked={close}/>
+                        
                     </li>
                   </ul>
 
