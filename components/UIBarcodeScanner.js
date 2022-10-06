@@ -33,10 +33,9 @@ const UIBarcodeScanner = ()=> {
     return (
         <>  
             <div id="scanner"></div>
-            {
-                codeResult.length &&
-                <p>{codeResult}</p>
-            }
+            <div className='debugger_'>
+                <p>Test : { codeResult.length ? codeResult.codeResult.code: ''}</p>
+            </div>
         </>
         
     )
