@@ -1,40 +1,28 @@
-import Quagga from 'quagga';
 import { useEffect, useState } from 'react';
+import BarcodeReader from 'react-barcode-reader'
 
 const UIBarcodeScanner = ()=> {
 
-    const [error, setError] = useState('');
-    const [codeResult, setCodeResult] = useState('');
+    const [data, setData] = useState('');
 
-    useEffect(()=> {
-        Quagga.init({
-            inputStream : {
-              name : "Live",
-              type : "LiveStream",
-              target: document.querySelector('#scanner')    // Or '#yourElement' (optional)
-            },
-            decoder : {
-              readers : ["code_128_reader"]
-            }
-          }, function(err) {
-              if (err) {
-                  setError(err.toString())
-                  return
-              }
-              console.log("Initialization finished. Ready to start");
-              Quagga.start();
-          });
+    const handleError = (error)=> {
+        setData(error)
+    }
 
-          Quagga.onProcessed(result=> {
-            codeResult(result);
-          })
-    }, [])
+    const handleScan = (value)=> {
+        setData(value)
+    }
 
     return (
         <>  
-            <div id="scanner"></div>
+            
+            <BarcodeReader
+                onError={handleError}
+                onScan={handleScan}
+            />
+  
             <div className='debugger_'>
-                <p>Test : { codeResult.length ? codeResult.codeResult.code: ''}</p>
+                <p>Test : { data.length ? data: ''}</p>
             </div>
         </>
         
