@@ -17,10 +17,9 @@ const UIBarcodeScanner = ({getDetails})=> {
                 onUpdate={(err, result) => {
                     if (result){
                         setData(JSON.parse(result.text))
-                        getDetails(data);
-                        return true;
+                        getDetails(data.customerID);
                     }
-                    else setData("Not Found");
+                    else setData(null);
                 }}
             />
 
