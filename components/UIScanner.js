@@ -1,14 +1,27 @@
 import { useState } from "react";
 import UIBarcodeScanner from "./UIBarcodeScanner";
+import UIModal from "./UIModal";
 
 const UIScanner = ()=> {
 
+    const [modal, setModal] = useState(false);
+    const [itemId, setItemId] = useState('');
+
+    const openPopup = (value)=> {
+        setItemId(value);
+        setModal(true)
+      }
 
     return (
         <div className="scanner_area">
             <div className="area_">
 
-                <UIBarcodeScanner />
+                <UIBarcodeScanner getDetails={openPopup}/>
+
+                {
+                    modal && 
+                    <UIModal id={itemId} close={()=> setModal(false)}/>
+                }
 
             </div>
         </div>
