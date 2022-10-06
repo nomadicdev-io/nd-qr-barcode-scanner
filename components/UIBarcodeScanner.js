@@ -6,10 +6,6 @@ const UIBarcodeScanner = ({getDetails})=> {
     const [data, setData] = useState('');
     const [disable, setDisable] = useState(false);
 
-    const handleScan = (value)=> {
-        setData(value)
-    }
-
     return (
         <>  
             <BarcodeScannerComponent

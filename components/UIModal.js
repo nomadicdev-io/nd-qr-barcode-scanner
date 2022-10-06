@@ -58,7 +58,7 @@ const UIModal = ({close, id})=> {
                     
                     <li className="full_">
                         {
-                            data.isValid ? <p>Already Validated</p> : <UIButton title="Validate" clicked={close}/>
+                            data.isValid ? <p className="red_">Already Validated</p> : <UIButton title="Validate" clicked={close}/>
                         }
                     </li>
                   </ul>
