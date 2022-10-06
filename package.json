@@ -10,8 +10,12 @@
   },
   "dependencies": {
     "next": "12.3.1",
+    "next-pwa": "^5.6.0",
+    "quagga": "^0.12.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-barcode-qrcode-scanner": "^0.1.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.55.0"
   },
   "devDependencies": {
     "eslint": "8.24.0",
