@@ -20,7 +20,7 @@ const UIBarcodeScanner = ({getDetails})=> {
                         getDetails(data.customerID);
                         return;
                     }
-                    else setData(null);
+                    else setData('');
                 }}
             />
 
