@@ -5,7 +5,7 @@ import UIModal from "./UIModal";
 const UIScanner = ()=> {
 
     const [modal, setModal] = useState(false);
-    const [itemId, setItemId] = useState('');
+    const [itemId, setItemId] = useState('Test');
 
     const openPopup = (value)=> {
         setItemId(value);
