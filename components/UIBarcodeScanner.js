@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 
 const UIBarcodeScanner = ()=> {
 
-    const [error, setError] = useState('')
+    const [error, setError] = useState('');
+    const [codeResult, setCodeResult] = useState('');
 
     useEffect(()=> {
         Quagga.init({
@@ -23,12 +24,19 @@ const UIBarcodeScanner = ()=> {
               console.log("Initialization finished. Ready to start");
               Quagga.start();
           });
+
+          Quagga.onProcessed(result=> {
+            codeResult(result);
+          })
     }, [])
 
     return (
         <>  
             <div id="scanner"></div>
-            <p>{error}</p>
+            {
+                codeResult.length &&
+                <p>{codeResult}</p>
+            }
         </>
         
     )
