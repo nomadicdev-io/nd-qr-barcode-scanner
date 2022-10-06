@@ -12,8 +12,8 @@ const UIBarcodeScanner = ()=> {
     return (
         <>  
             <BarcodeScannerComponent
-                width={300}
-                height={300}
+                width={'100%'}
+                height={'100%'}
                 onUpdate={(err, result) => {
                     if (result) setData(result.text);
                     else setData("Not Found");
