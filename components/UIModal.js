@@ -13,8 +13,8 @@ const UIModal = ({close, itemId})=> {
           const r = fetch(`http://localhost:5000/api/v1/userslist/${value}`)
           .then((response) => response.json())
           .then((data) => {
-            setData(res.data.data);
-            console.log(res.data.data)
+            setData(data.data);
+            console.log(data.data)
             setLoaded(true);
           });
 
