@@ -16,7 +16,7 @@ const UIScanner = ()=> {
         <div className="scanner_area">
             <div className="area_">
 
-                <p className="fixed">{itemId}</p>
+               
 
                 <UIBarcodeScanner getDetails={openPopup}/>
 
