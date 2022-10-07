@@ -7,7 +7,7 @@ const UIModal = ({close, itemId})=> {
     const [data, setData] = useState('');
     const [loaded, setLoaded] = useState(false);
 
-    const getData = async ()=> {
+    const getData = async (value)=> {
         try{
           const req = await axios.get(`http://localhost:5000/api/v1/userslist/${value}`).then((res)=> {
           setData(res.data.data);
