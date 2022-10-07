@@ -8,7 +8,7 @@ const UIBarcodeScanner = ({getDetails, isdisable})=> {
 
     return (
         <>  
-            <p className="fixed">{data}</p>
+            <p className="fixed">{data.customerID}</p>
 
             <BarcodeScannerComponent
                 width={'100%'}
@@ -16,7 +16,7 @@ const UIBarcodeScanner = ({getDetails, isdisable})=> {
                 onUpdate={(err, result) => {
                     if (result){
                         setDisable(true)
-                        setData(JSON.parse(result))
+                        setData(JSON.stringify(result))
                         getDetails(data.customerID);
                         return;
                     }
