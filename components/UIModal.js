@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import UIButton from "./UIButtons";
 
-const UIModal = ({close, id})=> {
+const UIModal = ({close, itemId})=> {
 
     const [data, setData] = useState('');
     const [loaded, setLoaded] = useState(false);
@@ -20,7 +20,7 @@ const UIModal = ({close, id})=> {
       }
     
       useEffect(()=> {
-        getData(id);
+        getData(itemId);
       }, [])
 
     return (

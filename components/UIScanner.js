@@ -23,7 +23,7 @@ const UIScanner = ()=> {
 
                 {
                     modal && 
-                    <UIModal id={itemId} close={()=> setModal(false)}/>
+                    <UIModal itemId={itemId} close={()=> setModal(false)}/>
                 }
 
             </div>
