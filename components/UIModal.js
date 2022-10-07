@@ -8,16 +8,20 @@ const UIModal = ({close, id})=> {
     const [loaded, setLoaded] = useState(false);
 
     const getData = async ()=> {
-        const req = await axios.get(`http://localhost:5000/api/v1/userslist/${id}`).then((res)=> {
+        try{
+          const req = await axios.get(`http://localhost:5000/api/v1/userslist/${value}`).then((res)=> {
           setData(res.data.data);
           console.log(res.data.data)
           setLoaded(true);
-        })
+          })
+        }catch(err){
+          console.log(err)
+        }
       }
     
       useEffect(()=> {
-        getData();
-      }, [id])
+        getData(id);
+      }, [])
 
     return (
         <div className="modal_">
