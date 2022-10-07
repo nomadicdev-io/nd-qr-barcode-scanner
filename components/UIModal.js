@@ -9,11 +9,16 @@ const UIModal = ({close, itemId})=> {
 
     const getData = async (value)=> {
         try{
-          const req = await axios.get(`http://localhost:5000/api/v1/userslist/${value}`).then((res)=> {
-          setData(res.data.data);
-          console.log(res.data.data)
-          setLoaded(true);
-          })
+
+          const r = fetch(`http://localhost:5000/api/v1/userslist/${value}`)
+          .then((response) => response.json())
+          .then((data) => {
+            setData(res.data.data);
+            console.log(res.data.data)
+            setLoaded(true);
+          });
+
+        
         }catch(err){
           console.log(err)
         }
