@@ -24,7 +24,9 @@ const UIModal = ({close, id})=> {
             <div className="overlay_"></div>
 
             <div className="content_">
-              <div className="inner_">
+              {
+                loaded && 
+                <div className="inner_">
 
                 <div className="image_wrap">
                   <div className="img_">
@@ -67,7 +69,8 @@ const UIModal = ({close, id})=> {
 
                 
 
-              </div>
+                </div>
+              }
             </div>
 
             <div className="close_" onClick={close}>
