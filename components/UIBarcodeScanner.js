@@ -17,9 +17,9 @@ const UIBarcodeScanner = ({getDetails, isdisable})=> {
                     if (result){
                         setDisable(true)
 
-                        console.log(JSON.stringify(result))
+                        console.log(JSON.parse(result.text))
 
-                        setData(JSON.stringify(result))
+                        setData(JSON.stringify(result.text))
                         getDetails(data.customerID);
                         return;
                     }
