@@ -16,6 +16,9 @@ const UIBarcodeScanner = ({getDetails, isdisable})=> {
                 onUpdate={(err, result) => {
                     if (result){
                         setDisable(true)
+
+                        console.log(JSON.stringify(result))
+
                         setData(JSON.stringify(result))
                         getDetails(data.customerID);
                         return;
