@@ -10,7 +10,7 @@ const UIModal = ({close, itemId})=> {
     const getData = async (value)=> {
         try{
 
-          const r = fetch(`http://localhost:5000/api/v1/userslist/${value}`)
+          const r = fetch(`http://192.168.0.22:5000/api/v1/userslist/${value}`)
           .then((response) => response.json())
           .then((data) => {
             setData(data.data);
