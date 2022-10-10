@@ -18,7 +18,7 @@ const UIBarcodeScanner = ({getDetails, isdisable})=> {
                         setDisable(true)
                         let d = JSON.parse(result.text)
                         console.log(d.customerID);
-                        getDetails(d.customerID);
+                        getDetails('633e72af36fb20dde1456726');
                     }
                     else setData('');
                 }}
@@ -27,7 +27,7 @@ const UIBarcodeScanner = ({getDetails, isdisable})=> {
 
             <div className='debugger_'>
                 <p>Test : {data.customerID}</p>
-                <button onClick={()=> getDetails('633e6ba836fb20dde1456705')} >Test Me</button>
+                <button onClick={()=> getDetails('633e72af36fb20dde1456726')} >Test Me</button>
             </div>
         </>
         

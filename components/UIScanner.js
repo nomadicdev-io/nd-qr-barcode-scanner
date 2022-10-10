@@ -6,6 +6,7 @@ const UIScanner = ()=> {
 
     const [modal, setModal] = useState(false);
     const [itemId, setItemId] = useState('Test');
+    const [userData, setUserData] = useState('');
 
     const openPopup = (value)=> {
         console.log(value.toString())

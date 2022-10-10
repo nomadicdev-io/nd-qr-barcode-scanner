@@ -26,7 +26,7 @@ const UIModal = ({close, itemId})=> {
     
       useEffect(()=> {
         getData(itemId);
-      }, [])
+      }, [itemId])
 
     return (
         <div className="modal_">
